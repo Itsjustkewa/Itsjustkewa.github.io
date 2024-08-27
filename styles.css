@@ -1,6 +1,8 @@
 * {
   margin:0px;
   padding:0px;
+  background-color: #000000;
+  box-sizing: border-box;
 }
 
 #octocat {
@@ -9,9 +11,249 @@
   margin: 50px auto;
 }
 
+footer
+{
+  margin-top: auto;
+}
+
+/* ------------------------Header-------------------------------- */
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  /*background-color: #f1f1f1;*/
+  padding: 15px 35px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20%;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #7b7b7b43;
+  color: rgba(105, 76, 146, 0.803);
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: rgb(67, 67, 67);
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+/*---------------------------------------------------------------*/
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 p {
   display: block;
   width: 400px;
   margin: 50px auto;
   font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  color: azure;
+}
+
+/* Style the tab buttons */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+/* Change background color of buttons on hover */
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Set default styles for tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+  animation: fadeEffects 1s;
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Style each tab content individually */
+#London {background-color:rgb(255, 0, 0);}
+#Paris {background-color:green;}
+#Tokyo {background-color:blue;}
+#Oslo {background-color:orange;}
+
+/* ------------------------Footer-------------------------------- */
+
+.footer{
+  display: flex;
+  padding: 40px 80px;
+  background-color: rgb(0, 0, 0);
+  opacity: 70%;
+  bottom: 0%;
+  margin: auto;
+}
+
+.footer a 
+{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.socialIcons
+{
+  display: flex;
+  justify-content: center;
+}
+
+.socialIcons a
+{
+  padding: 10px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.socialIcons a i{
+  font-size: 2em;
+  color: rgb(200, 200, 200);
+  opacity: 0,9;
+}
+
+.inforList
+{
+  display: flex;
+  margin-left:10%;
+  line-height: 2em;
+  font-size: small;
+}
+
+.inforList h3
+{
+  color: white;
+  text-align: left;
+  font-size: medium;
+}
+
+.ijkBanner
+{
+  padding: 1px 100px;
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: auto;
+}
+
+.ijkBanner h1
+{
+  padding: 60px 80px;
+  margin: auto;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  font-size: small;
+}
+
+.ijkBanner h1 span
+{
+  color: rebeccapurple;
+  position: relative;
+  font-size: xx-large;
+  font-family: fantasy;
+}
+
+.ijkBanner span::before {
+  content: "";
+  height: 30px;
+  width: 2px;
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  background: #bc53ed00;
+  transform: translateY(-45%);
+  animation: blink 0.8s infinite;
+}
+
+.ijkBanner h1 span.stop-blinking::before
+{
+  animation: none;
+}
+
+@keyframes blink {
+  50% { opacity: 50% }
+}
+
+.maincontainer
+{
+  display: flex;
+  /*background-color: rgba(222, 184, 135, 0.191);*/
+  opacity: 70%;
+  justify-content: center;
+  /*text-align: center;*/
+  padding: 70px 10px;
+}
+
+.maincontainer p
+{
+  /*float: right;*/
+  margin: -10px 10px 10px 100px;
+  font-size: smaller;
+  text-justify: inter-word;
+  display: block;
+  font: Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+}
+
+.captures
+{
+  width: 350px;
+  height: 250px;
+  float: left;
+  margin-left: 10%;
 }
